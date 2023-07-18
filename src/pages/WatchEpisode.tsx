@@ -45,7 +45,7 @@ export default function WatchEpisode() {
         <title>
           {isAnimeLoading
             ? "Animetetsu"
-            : `Playing ${animeInfo.title} Episode ${episodeNum} | Animetetsu`}
+            : `${animeInfo.title} Episode ${episodeNum} | Animetetsu`}
         </title>
       </Helmet>
       <h2 className="text-sm xs:text-base sm:text-lg md:text-xl text-center">

@@ -20,6 +20,22 @@ export default function VideoPlayer({ src }: { src: string }) {
         keyboard: { global: true },
         tooltips: { controls: true },
         ratio: "16:9",
+        controls: [
+          "play-large",
+          "rewind",
+          "play",
+          "fast-forward",
+          "progress",
+          "current-time",
+          "duration",
+          "mute",
+          "volume",
+          "settings",
+          // "download",
+          "pip",
+          "airplay",
+          "fullscreen",
+        ],
       });
       const hls = new Hls();
       hls.loadSource(src);
@@ -38,17 +54,21 @@ export default function VideoPlayer({ src }: { src: string }) {
         ratio: "16:9",
         controls: [
           "play-large",
+          // "rewind",
           "play",
+          // "fast-forward",
           "progress",
           "current-time",
+          "duration",
           "settings",
+          // "download",
           "pip",
           "airplay",
           "fullscreen",
         ],
       });
     }
-  }, 1000);
+  }, 500);
 
   return (
     <>
