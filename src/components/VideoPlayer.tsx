@@ -30,23 +30,25 @@ export default function VideoPlayer({ src }: { src: string }) {
       );
     }
   }, [src, videoRef]);
-  if (videoRef.current) {
-    new Plyr(videoRef.current, {
-      keyboard: { global: true },
-      tooltips: { controls: true },
-      ratio: "16:9",
-      controls: [
-        "play-large",
-        "play",
-        "progress",
-        "current-time",
-        "settings",
-        "pip",
-        "airplay",
-        "fullscreen",
-      ],
-    });
-  }
+  setTimeout(() => {
+    if (videoRef.current) {
+      new Plyr(videoRef.current, {
+        keyboard: { global: true },
+        tooltips: { controls: true },
+        ratio: "16:9",
+        controls: [
+          "play-large",
+          "play",
+          "progress",
+          "current-time",
+          "settings",
+          "pip",
+          "airplay",
+          "fullscreen",
+        ],
+      });
+    }
+  }, 1000);
 
   return (
     <>
