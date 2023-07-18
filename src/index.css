@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+* {
+  font-family: "Inter", Roboto, Arial, sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #787878 #c0c0c0;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #787878;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #c0c0c0;
+}
+
+.link-btn {
+  @apply text-sm sm:text-base text-white text-center bg-sky-900 hover:bg-sky-800 active:bg-sky-800 transition-colors py-2 rounded-md select-none;
+}
