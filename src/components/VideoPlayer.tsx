@@ -16,6 +16,9 @@ export default function VideoPlayer({ src }: { src: string }) {
       video.src = src;
     } else if (Hls.isSupported()) {
       // This will run in all other modern browsers
+      const hls = new Hls();
+      hls.loadSource("");
+      hls.loadSource(src);
       new Plyr(video, {
         keyboard: { global: true },
         tooltips: { controls: true },
@@ -37,8 +40,6 @@ export default function VideoPlayer({ src }: { src: string }) {
           "fullscreen",
         ],
       });
-      const hls = new Hls();
-      hls.loadSource(src);
       hls.attachMedia(video);
     } else {
       console.error(
