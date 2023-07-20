@@ -32,6 +32,7 @@ export default function Root() {
         className="my-4 px-6 py-3 rounded-full w-5/6 sm:w-1/2 lg:w-1/3 border-none outline-none bg-gray-700 text-white"
         placeholder="Enter Anime"
         onChange={(e) => setQuery(e.target.value)}
+        autoFocus
       />
       <Link
         to={{
